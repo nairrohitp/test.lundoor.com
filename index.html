@@ -24,8 +24,9 @@
 $(function() {
 console.log( "ready!" );
 $.get( "https://freegeoip.net/json/", function( data ) {
-  $( "#result" ).html( data.country_code );
-  alert( "Load was performed." );
+  //$( "#result" ).html( data.country_code );
+  //alert( "Load was performed." );
+  console.log(data.country_code);
 });
 });
 </script>
