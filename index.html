@@ -23,11 +23,17 @@
 <script>
 $(function() {
 // console.log( "ready!" );
-$.get( "https://freegeoip.net/json/", function( data ) {
-  $( "#country" ).html( data.country_code );
+//$.get( "https://freegeoip.net/json/", function( data ) {
+  //$( "#country" ).html( data.country_code );
   //alert( "Load was performed." );
   //console.log(data.country_code);
-});
+//});
+$.getJSON("https://freegeoip.net/json/?callback=?",
+		function(json) {
+		    $( "#country" ).html( json.country_code );
+			// document.write("My IP address is : ", json.ip);
+		}
+	);
 });
 </script>
 </body>
