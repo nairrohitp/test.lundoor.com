@@ -29,9 +29,8 @@
 <script>
 $(function() {
 $.getJSON("https://freegeoip.net/json/?callback=?",
-  function(json) {
-    $( "#country" ).html( json.country_code );
-			document.write("My IP address is : ", json.ip);
+		function(json) {
+		  $( "#country" ).html( json.country_code );
 		}
 	);
 });
